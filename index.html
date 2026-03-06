@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaryan Kalia - Product Designer</title>
+    <meta name="description"
+        content="Aaryan Kalia - Product Designer portfolio. Exploring the intersection of clarity and craft.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Geist:wght@300;400;500;600&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Structure mapped out for sections -->
+    <!-- Navigation (Bottom Floating Pill) -->
+    <nav class="nav-pill" id="main-nav">
+        <ul class="nav-list">
+            <li><a href="#hero" class="nav-item active" data-tooltip="Home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span class="nav-label">Home</span>
+                </a></li>
+            <li><a href="#about" class="nav-item" data-tooltip="About">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="5"></circle>
+                        <path d="M20 21a8 8 0 0 0-16 0"></path>
+                    </svg>
+                    <span class="nav-label">About</span>
+                </a></li>
+            <li><a href="#work" class="nav-item" data-tooltip="Work">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    <span class="nav-label">Work</span>
+                </a></li>
+            <li><a href="#contact" class="nav-item" data-tooltip="Contact">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span class="nav-label">Contact</span>
+                </a></li>
+            <li class="nav-divider"></li>
+            <li><button class="nav-item search-trigger" aria-label="Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span class="nav-label search-shortcut">
+                        Cmd+K
+                    </span>
+                </button></li>
+        </ul>
+    </nav>
+
+    <!-- Hero / Landing -->
+    <section id="hero" class="hero-section">
+        <div class="noise-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content fade-up">
+                <h1 class="hero-name">Aaryan Kalia</h1>
+                <p class="hero-role">
+                    A Product Designer who believes great design is both precise and expressive.
+                    Working across UX research, interaction design, prototyping, and systems.
+                </p>
+                <div class="hero-current">Currently leading design at TuteDude</div>
+                <a href="#work" class="cta cta-large cta-white" style="margin-top: var(--space-40);">
+                    View Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infinite Scroll Ticker -->
+    <div class="ticker-wrapper">
+        <div class="ticker-track">
+            <!-- First set -->
+            <div class="ticker-item">ChatGPT</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Gemini</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Claude</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Antigravity</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Figma</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Adobe Illustrator</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Photoshop</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Cursor</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Framer</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Balsamiq</div>
+            <div class="ticker-sep" style="margin-right: 24px;">◆</div>
+
+            <!-- Duplicated set for seamless loop -->
+            <div class="ticker-item">ChatGPT</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Gemini</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Claude</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Antigravity</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Figma</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Adobe Illustrator</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Photoshop</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Cursor</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Framer</div>
+            <div class="ticker-sep">◆</div>
+            <div class="ticker-item">Balsamiq</div>
+            <div class="ticker-sep" style="margin-right: 24px;">◆</div>
+        </div>
+    </div>
+
+    <!-- Section: Selected Work -->
+    <section id="work" class="work-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div class="section-label">SELECTED WORK</div>
+                <h2 class="section-heading">Projects</h2>
+            </div>
+
+            <div class="work-grid">
+                <!-- Project 1 -->
+                <a href="#" class="project-card fade-up">
+                    <div class="card-content">
+                        <div class="card-category">UX Design</div>
+                        <h3 class="card-title">Fairframe — Ethical Design App for Young Designers</h3>
+                        <div class="card-tags">
+                            <span class="tag-pill">UX Research</span>
+                            <span class="tag-pill">Interaction Design</span>
+                            <span class="tag-pill">Prototyping</span>
+                        </div>
+                        <p class="card-desc">An app helping early-career designers navigate ethical decision-making in
+                            UX practice.</p>
+                    </div>
+                    <div class="card-mockup">
+                        <div class="mockup-placeholder"></div>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="#" class="project-card fade-up">
+                    <div class="card-content">
+                        <div class="card-category">UX Design</div>
+                        <h3 class="card-title">Stitchcraft Studio — Immersive Interface for Young Tailors</h3>
+                        <div class="card-tags">
+                            <span class="tag-pill">UX Research</span>
+                            <span class="tag-pill">AR/VR</span>
+                            <span class="tag-pill">User Testing</span>
+                        </div>
+                        <p class="card-desc">An immersive tailoring application designed in collaboration with an AR/VR
+                            development team.</p>
+                    </div>
+                    <div class="card-mockup">
+                        <div class="mockup-placeholder"></div>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="#" class="project-card fade-up">
+                    <div class="card-content">
+                        <div class="card-category">E-Commerce UX</div>
+                        <h3 class="card-title">Wellbeing Nutrition — Health Platform Redesign</h3>
+                        <div class="card-tags">
+                            <span class="tag-pill">UX Design</span>
+                            <span class="tag-pill">Mobile</span>
+                            <span class="tag-pill">Design Systems</span>
+                        </div>
+                        <p class="card-desc">End-to-end UX redesign for a health and wellness e-commerce platform
+                            driving measurable sales growth.</p>
+                    </div>
+                    <div class="card-mockup">
+                        <div class="mockup-placeholder"></div>
+                    </div>
+                </a>
+
+                <!-- Placeholders -->
+                <div class="project-card placeholder-card fade-up">
+                    <div class="placeholder-text">[COMING SOON]</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section: About -->
+    <section id="about" class="about-section">
+        <a href="#hero" class="back-pill fade-up">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Portfolio
+        </a>
+
+        <div class="about-container">
+            <h2 class="about-headline fade-up">I didn't start at a screen.</h2>
+
+            <div class="about-copy fade-up">
+                <p>I spent 12 years as a competitive basketball player — studying systems, reading patterns, and making
+                    split-second decisions under pressure. When I found design, I realized I'd been doing it all along.
+                    Sport and design share the same obsession: understanding how people move, and building something
+                    that moves with them.</p>
+
+                <p>Today I work as a Product Designer, currently leading design at TuteDude. My work lives at the
+                    intersection of clarity and craft — UX research, interaction design, and systems thinking. I've
+                    shipped work across health, education, and e-commerce, and I care deeply about design that performs
+                    as well as it looks.</p>
+            </div>
+
+            <div class="about-image fade-up">
+                <!-- Monochrome placeholder image -->
+                <div class="monochrome-placeholder"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Resume -->
+    <section id="resume" class="resume-section">
+        <div class="resume-topbar container fade-up">
+            <h2 class="section-heading">Resume</h2>
+            <a href="#" class="cta cta-large cta-obsidian">↓ Download Resume</a>
+        </div>
+
+        <div class="resume-container container">
+            <!-- Left Layout: Sticky Sidebar -->
+            <div class="resume-sidebar">
+                <nav class="resume-nav">
+                    <ul>
+                        <li><a href="#exp" class="resume-nav-link active">Experience</a></li>
+                        <li><a href="#proj" class="resume-nav-link">Projects</a></li>
+                        <li><a href="#edu" class="resume-nav-link">Education</a></li>
+                        <li><a href="#skills" class="resume-nav-link">Skills</a></li>
+                        <li><a href="#awards" class="resume-nav-link">Awards</a></li>
+                        <li><a href="#certs" class="resume-nav-link">Certifications</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Right Layout: Content -->
+            <div class="resume-content">
+
+                <!-- Experience -->
+                <div id="exp" class="resume-block fade-up">
+                    <h3 class="resume-block-title">EXPERIENCE</h3>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div class="resume-item-title-meta">
+                                <h4>TuteDude</h4>
+                                <span class="resume-item-role">Lead Designer</span>
+                            </div>
+                            <span class="resume-item-date">Jan 2026 – Present</span>
+                        </div>
+                        <div class="resume-item-body">
+                            <p>Currently leading design across the platform, owning end-to-end design deliverables.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div class="resume-item-title-meta">
+                                <h4>Infinite Locus</h4>
+                                <span class="resume-item-role">Product Designer</span>
+                            </div>
+                            <span class="resume-item-date">Jul 2025 – Jan 2026</span>
+                        </div>
+                        <div class="resume-item-body">
+                            <ul>
+                                <li>Designed high-fidelity screens for Wellbeing Nutrition, an e-commerce platform in
+                                    health and wellness.</li>
+                                <li>Drove 1.6% increase in Gross Sales (₹18.6 Crore) and scaled Total Orders by 777% by
+                                    leading end-to-end UX redesign for the Wellbeing Carnival Sale.</li>
+                                <li>Reduced financial returns by 260% while boosting Returning Customer Rate from 25% to
+                                    60.9% via mobile information architecture optimization.</li>
+                                <li>Achieved 526% increase in Add to Cart and 326% increase in Reach to Checkout through
+                                    A/B testing and user flow consolidation.</li>
+                                <li>Led Design Quality Assurance for Royal Enfield ensuring pixel-perfect parity across
+                                    375px screens.</li>
+                                <li>Built a comprehensive multi-platform Design System with 400+ components across web,
+                                    mweb, and native app.</li>
+                                <li>Served as lead designer for Matahari, managing deliverables and communicating
+                                    directly with the Indonesian client.</li>
+                                <li>Executed full Ratings Flow and Fit Finder decision tool for the Tenxyou platform.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div class="resume-item-title-meta">
+                                <h4>ZIGRAM</h4>
+                                <span class="resume-item-role">Product Design Intern</span>
+                            </div>
+                            <span class="resume-item-date">Jan 2025 – Jun 2025</span>
+                        </div>
+                        <div class="resume-item-body">
+                            <ul>
+                                <li>Revamped and standardized existing designs for a cleaner, more consistent visual
+                                    identity.</li>
+                                <li>Performed usability testing, competitor analysis, heuristic evaluation, stakeholder
+                                    interviews, persona creation, wireframing, and high-fidelity prototyping.</li>
+                                <li>Designed high-impact creatives contributing to follower growth from 62,000 to 70,000
+                                    in 3 months.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div id="proj" class="resume-block fade-up">
+                    <h3 class="resume-block-title">PROJECTS</h3>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div class="resume-item-title-meta">
+                                <h4>Fairframe — Ethical Design App for Young Designers</h4>
+                                <span class="resume-item-role">UX Designer</span>
+                            </div>
+                            <span class="resume-item-date">Jan 2025 – May 2025</span>
+                        </div>
+                        <div class="resume-item-body">
+                            <ul>
+                                <li>Conducted 10+ user interviews and created 3 user personas.</li>
+                                <li>Synthesized data from 30+ survey responses identifying trends in ethical UX
+                                    awareness.</li>
+                                <li>Designed 45+ high-fidelity screens with accessibility and inclusivity as core
+                                    constraints.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div class="resume-item-title-meta">
+                                <h4>Stitchcraft Studio — Immersive Interface for Young Tailors</h4>
+                                <span class="resume-item-role">UX Designer</span>
+                            </div>
+                            <span class="resume-item-date">Aug 2024 – Dec 2024</span>
+                        </div>
+                        <div class="resume-item-body">
+                            <ul>
+                                <li>Conducted 10+ interviews including 5 with industry-leading experts.</li>
+                                <li>Executed competitive analysis and user surveys to define core features and flows.
+                                </li>
+                                <li>Collaborated with an AR/VR development team to explore and optimize application
+                                    functionality.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div id="edu" class="resume-block fade-up">
+                    <h3 class="resume-block-title">EDUCATION</h3>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div class="resume-item-title-meta">
+                                <h4>University of Petroleum & Energy Studies, Dehradun</h4>
+                                <span class="resume-item-role">B.Des in Interaction Design</span>
+                            </div>
+                            <span class="resume-item-date">2021 – 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div id="skills" class="resume-block fade-up">
+                    <h3 class="resume-block-title">SKILLS</h3>
+
+                    <div class="resume-skill-group">
+                        <h5>Design</h5>
+                        <div class="resume-tags">
+                            <span>User Experience</span><span>Interaction Design</span><span>User
+                                Interface</span><span>Digital Prototyping</span><span>Visual
+                                Design</span><span>Wireframing</span><span>Low/High Fidelity Mockups</span><span>Design
+                                Systems</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-skill-group">
+                        <h5>Research</h5>
+                        <div class="resume-tags">
+                            <span>User Interviews</span><span>User Testing</span><span>Information
+                                Architecture</span><span>Journey Mapping</span><span>Quantitative
+                                Analysis</span><span>A/B Testing</span><span>Competitor Analysis</span><span>Design
+                                Strategy</span><span>Heuristic Evaluation</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-skill-group">
+                        <h5>Tools</h5>
+                        <div class="resume-tags">
+                            <span>Figma</span><span>Framer</span><span>Sketch</span><span>Adobe
+                                XD</span><span>Illustrator</span><span>Photoshop</span><span>Invision</span><span>Cursor</span><span>Notion</span><span>Jira</span><span>Confluence</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-skill-group">
+                        <h5>Visual Design</h5>
+                        <div class="resume-tags">
+                            <span>Poster Design</span><span>Brand
+                                Guidelines</span><span>Typography</span><span>Iconography</span><span>Social Media
+                                Design</span><span>Web Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awards -->
+                <div id="awards" class="resume-block fade-up">
+                    <h3 class="resume-block-title">AWARDS</h3>
+                    <div class="award-item">
+                        <span class="award-name">Design Hackathon Winner — Kalakriti</span>
+                        <span class="award-year">2024</span>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div id="certs" class="resume-block fade-up" style="margin-bottom: 0;">
+                    <h3 class="resume-block-title">CERTIFICATIONS</h3>
+                    <ul class="cert-list">
+                        <li>Complete Web and Mobile Designer: UI/UX, Figma <span class="cert-meta">— Udemy, 2025</span>
+                        </li>
+                        <li>Adobe Illustrator CC Essentials <span class="cert-meta">— Udemy, 2025</span></li>
+                        <li>Figma UI/UX Design Advanced <span class="cert-meta">— Udemy, 2023</span></li>
+                        <li>Figma UI/UX Design Essentials <span class="cert-meta">— Udemy, 2023</span></li>
+                        <li>Ask Questions to Make Data-Driven Decisions <span class="cert-meta">— Google, 2023</span>
+                        </li>
+                        <li>Conduct UX Research and Test Early Concepts <span class="cert-meta">— Google, 2023</span>
+                        </li>
+                        <li>Create High-Fidelity Designs and Prototypes in Figma <span class="cert-meta">— Google,
+                                2023</span></li>
+                        <li>Design-Led Strategy <span class="cert-meta">— University of Sydney, 2022</span></li>
+                        <li>Build Wireframes and Low-Fidelity Prototypes <span class="cert-meta">— Google, 2022</span>
+                        </li>
+                        <li>Design Thinking for Innovation <span class="cert-meta">— University of Virginia, 2022</span>
+                        </li>
+                        <li>Start the UX Design Process <span class="cert-meta">— Google, 2022</span></li>
+                        <li>Foundations of User Experience Design <span class="cert-meta">— Google, 2025</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <h2 class="contact-headline fade-up">Let's build something.</h2>
+            <p class="contact-subtext fade-up">I'm currently open to full-time and freelance opportunities. If you have
+                a project or role in mind, I'd love to hear about it.</p>
+
+            <div class="availability-badge fade-up">
+                <div class="pulse-dot"></div>
+                AVAILABLE FOR NEW PROJECTS
+            </div>
+
+            <a href="mailto:aaryan22kalia@gmail.com" class="contact-email fade-up">aaryan22kalia@gmail.com</a>
+
+            <div class="social-links fade-up">
+                <a href="mailto:aaryan22kalia@gmail.com" class="social-link">
+                    <span class="social-label">Email</span>
+                    <span class="social-value">aaryan22kalia@gmail.com</span>
+                    <span class="social-arrow">→</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span class="social-label">LinkedIn</span>
+                    <span class="social-value">linkedin.com/in/aaryankalia</span>
+                    <span class="social-arrow">→</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span class="social-label">Behance</span>
+                    <span class="social-value">behance.net/aaryankalia</span>
+                    <span class="social-arrow">→</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span class="social-label">Unsplash</span>
+                    <span class="social-value">unsplash.com/@aaryankalia</span>
+                    <span class="social-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cmd+K Search Modal -->
+    <div class="search-modal-overlay" id="search-modal">
+        <div class="search-modal-content">
+            <div class="search-input-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="search-input" placeholder="Search portfolio..." autocomplete="off">
+                <button class="close-search">ESC</button>
+            </div>
+            <div class="search-results">
+                <div class="search-category">Sections</div>
+                <ul class="search-suggestions">
+                    <li><a href="#hero">Hero Section</a></li>
+                    <li><a href="#work">Selected Work</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
