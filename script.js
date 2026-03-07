@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5 // 50% of the section needs to be visible
+        threshold: 0.4 // 40% of the section needs to be visible
     };
 
     const sectionObserver = new IntersectionObserver((entries) => {
@@ -32,6 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => {
         sectionObserver.observe(section);
+    });
+
+    /* --- Nav Hover Expand Logic --- */
+    navItems.forEach(item => {
+        if (item.classList.contains('search-trigger')) return;
+        item.addEventListener('mouseenter', () => {
+            navItems.forEach(other => {
+                if (other !== item) other.classList.remove('expanded');
+            });
+            item.classList.add('expanded');
+        });
+        item.addEventListener('mouseleave', () => {
+            item.classList.remove('expanded');
+        });
     });
 
     /* --- Fade-Up Scroll Animation --- */
@@ -119,75 +133,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create Custom Cursor Element
     const cursor = document.createElement('div');
     cursor.id = 'custom-cursor';
-    cursor.innerHTML = 'View<br>Project';
+    cursor.innerHTML = 'View Project';
     document.body.appendChild(cursor);
 
-    // Custom Cursor tracking logic - with requestAnimationFrame for smooth lag
-    let mouseX = 0;
-    let mouseY = 0;
-    let cursorX = 0;
-    let cursorY = 0;
     let cursorActive = false;
 
-    // 80ms lag approximation in easing (0.15 is roughly 80ms feel at 60fps)
-    const easing = 0.15;
-
-    // Update global mouse position
+    // Follows cursor in real time with zero lag
     document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-
-        if (!cursorActive) {
-            cursorX = mouseX;
-            cursorY = mouseY;
+        if (cursorActive) {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
         }
     });
 
-    const animateCursor = () => {
-        if (cursorActive) {
-            // Calculate distance and apply easing for lag
-            cursorX += (mouseX - cursorX) * easing;
-            cursorY += (mouseY - cursorY) * easing;
-
-            cursor.style.left = `${cursorX}px`;
-            cursor.style.top = `${cursorY}px`;
-        }
-        requestAnimationFrame(animateCursor);
-    };
-
-    // Start animation loop
-    animateCursor();
-
     // Card Specific Interactions
     projectCards.forEach(card => {
-
-        // 1. Custom Circular Cursor visibility
-        card.addEventListener('mouseenter', () => {
+        card.addEventListener('mouseenter', (e) => {
             cursorActive = true;
             cursor.classList.add('active');
-
-            // Snap quickly on enter to avoid long travel distance
-            cursorX = mouseX;
-            cursorY = mouseY;
-            cursor.style.left = `${cursorX}px`;
-            cursor.style.top = `${cursorY}px`;
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
         });
 
         card.addEventListener('mouseleave', () => {
             cursorActive = false;
             cursor.classList.remove('active');
-        });
-
-        // 2. Glow burn effect tracking
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            // Calculate mouse position relative to card boundaries
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            // Update CSS variables for radial gradient
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
         });
     });
 });
